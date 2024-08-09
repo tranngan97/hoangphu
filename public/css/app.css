@@ -1,5 +1,6 @@
 body {
-    margin: 0
+    margin: 0;
+    font-family: "Inter", sans-serif;
 }
 
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary {
@@ -687,7 +688,7 @@ body,.container,.full-width .ubermenu-nav,.container-width,.row {
 }
 
 .container-width,.full-width .ubermenu-nav,.container,.row {
-    max-width: 1080px
+    max-width: 70vw;
 }
 
 .row.row-collapse {
@@ -1090,11 +1091,12 @@ body.framed,body.framed header,body.framed .header-wrapper,body.boxed,body.boxed
 
 .nav-dropdown {
     position: absolute;
-    z-index: 9;
+    z-index: 100;
     opacity: 0;
     min-width: 200px;
     margin: unset !important;
     border: 2px solid #ddd;
+    background-color: white;
 }
 
 .dark.nav-dropdown {
@@ -1462,17 +1464,6 @@ li.current-dropdown>.nav-dropdown-full,li.has-dropdown:hover>.nav-dropdown-full 
 @media(min-width: 850px) {
     .nav-divided>li {
         margin:0 .7em
-    }
-
-    .nav-divided>li+li>a:after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        width: 1px;
-        border-left: 1px solid rgba(0,0,0,.1);
-        height: 15px;
-        margin-top: -7px;
-        left: -1em
     }
 
     .nav-divided>li+li.icon-top>a:after {
@@ -5463,10 +5454,6 @@ pre,blockquote,form,figure,p,dl,ul,ol {
 
 form p {
     margin-bottom: .5em
-}
-
-body {
-    line-height: 1.6
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -9910,6 +9897,17 @@ li.wc-layered-nav-rating .star-rating {
     opacity: 1;
 }
 .logo img {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 120px;
+}
+.nav-left li {
+    padding-right: 1.5rem;
+}
+.nav-left li:not(:last-child)::after{
+    content: '';
+    height: 60%;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    background-color: #ffffff;
 }
