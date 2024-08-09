@@ -1,13 +1,13 @@
 @php
-$banners = \App\Http\Controllers\BannersController::getAllBanner();
+$tests = \App\Http\Controllers\TestsController::getAllTest();
 @endphp
 @extends('voyager::master')
-@section('page_title', __('voyager::generic.viewing'). ' Banners')
+@section('page_title', __('voyager::generic.viewing'). ' Bài Thi')
 
 @section('page_header')
     <div class="container-fluid">
-        <h1 class="page-title">Banners</h1>
-        <a href="{{url('admin/banner/create')}}" class="btn btn-success btn-add-new">
+        <h1 class="page-title">Bài Thi</h1>
+        <a href="{{url('admin/test/create')}}" class="btn btn-success btn-add-new">
             <i class="voyager-plus"></i><span>{{ __('voyager::generic.add_new') }}</span>
         </a>
     </div>
@@ -25,22 +25,27 @@ $banners = \App\Http\Controllers\BannersController::getAllBanner();
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Image</th>
-                                        <th>Page</th>
+                                        <th>File</th>
+                                        <th>Phân Loại</th>
+                                        <th>Đáp án</th>
                                         <th class="actions dt-not-orderable">{{ __('voyager::generic.actions') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($banners as $banner)
+                                    @foreach($tests as $test)
                                         <tr>
-                                            <td>{{$banner['id']}}</td>
-                                            <td><img src="{{URL::to($banner['image_url'])}}" style="max-width: 100px"></td>
-                                            <td>{{$banner['page_id']}}</td>
+                                            <td>{{$test['test_id']}}</td>
+                                            <td><a href="{{URL::to(str_replace('public', 'storage', $test['file_url']))}}" target="_blank">{{$test['file_name']}}</a></td>
+                                            @php
+                                                $categoryName = \App\Http\Controllers\TestsController::getCategoryName($test['category']);
+                                            @endphp
+                                            <td>{{$categoryName}}</td>
+                                            <td>{{$test['answer']}}</td>
                                             <td>
-{{--                                                <a href="{{url('admin/banner/edit')}}" class="btn btn-primary btn-sm edit">--}}
+{{--                                                <a href="{{url('admin/test/edit')}}" class="btn btn-primary btn-sm edit">--}}
 {{--                                                    <span>{{ __('voyager::generic.edit') }}</span>--}}
 {{--                                                </a>--}}
-                                                <a href="{{url('admin/banner/delete', ['id' => $banner['id']])}}" class="btn btn-danger btn-sm delete">
+                                                <a href="{{url('admin/test/delete', ['id' => $test['test_id']])}}" class="btn btn-danger btn-sm delete">
                                                     <span>{{ __('voyager::generic.delete') }}</span>
                                                 </a>
                                             </td>

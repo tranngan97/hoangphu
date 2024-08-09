@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\BannersController;
+use App\Http\Controllers\TestsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,8 +16,11 @@ use App\Http\Controllers\BannersController;
 */
 Route::get('/', [
     PagesController::class, 'getPage'
-])->where('slug', 'home-page');;
+])->where('slug', 'home-page');
 
+Route::get('/bai-thi', [
+    TestsController::class, 'index'
+]);
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
     Route::get('banners', function(){
@@ -27,6 +31,21 @@ Route::group(['prefix' => 'admin'], function () {
     });
     Route::post('banner/save', [
         BannersController::class, 'save'
+    ]);
+    Route::get('banner/delete/{slug}', [
+        BannersController::class, 'delete'
+    ]);
+    Route::get('tests', function(){
+        return view('admin_test');
+    });
+    Route::get('test/create', function(){
+        return view('admin_test_create');
+    });
+    Route::post('test/save', [
+        TestsController::class, 'save'
+    ]);
+    Route::get('test/delete/{slug}', [
+        TestsController::class, 'delete'
     ]);
 });
 

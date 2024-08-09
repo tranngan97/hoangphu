@@ -52,4 +52,12 @@ class BannersController extends Controller
         }
         return str_replace('public', 'storage', $banner->image_url);
     }
+
+    public function delete($slug)
+    {
+        $banner = Banner::where('banner_id', $slug);
+        $banner = $banner->firstOrFail();
+        $banner->delete();
+        return Redirect::to('admin/banners');
+    }
 }

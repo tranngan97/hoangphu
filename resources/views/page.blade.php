@@ -2,7 +2,7 @@
 @php
     $topBannerImage = \App\Http\Controllers\BannersController::getByPage($page->id);
 @endphp
-@section('content')
+@section('main-banner')
     @if($topBannerImage)
         <div class="banner-main" id="main-banner-section">
             <img style="width: 100vw; height: 500px" src="{{$topBannerImage}}">

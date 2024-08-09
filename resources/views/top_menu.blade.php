@@ -11,8 +11,8 @@
             <ul class="nav top-bar-nav nav-right nav-small nav-divided top-buttons">
                 <li class="html header-button-2">
                     <div class="header-button">
-                        <a href="https://duhocbic.net/danh-sach-bai-thi/" class="button secondary is-xlarge box-shadow-1-hover">
-                            <span>Bai thi</span>
+                        <a href="{{url('bai-thi')}}" class="button secondary is-xlarge box-shadow-1-hover">
+                            <span>Bài Thi</span>
                         </a>
                     </div>
                 </li>
