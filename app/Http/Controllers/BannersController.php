@@ -39,4 +39,17 @@ class BannersController extends Controller
         }
         return $data;
     }
+
+    public function getByPage($pageId)
+    {
+        if (count(Banner::get()) < 1) {
+            return false;
+        }
+        $banner = Banner::where('page_id', $pageId);
+        $banner = $banner->firstOrFail();
+        if (!$banner) {
+            return false;
+        }
+        return str_replace('public', 'storage', $banner->image_url);
+    }
 }

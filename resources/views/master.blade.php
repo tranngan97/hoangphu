@@ -17,18 +17,19 @@
         <div class="header-wrapper">
             {{menu('maintop', 'top_menu')}}
             <div class="header-main" id="masthead">
-                <div class="flex-row container">
+                <div class="flex-row container" style="margin-top: 1rem;margin-bottom: 1rem;">
                     <div id="logo" class="flex-col logo">
                         <!-- Header logo -->
                         <a href="https://duhochoangphu.com.vn/" title="Du Học Và XKLD Hoàng Phú" rel="home">
                             <img src="https://duhochoangphu.com.vn//storage/359836944_766592068802819_4378199925933335674_n.jpg" class="header_logo header-logo" alt="Du học và xuất khẩu lao động BIC">
                         </a>
                     </div>
-                    <div class="flex-col flex-right">
+                    <div class="flex-col">
                         {{menu('main', 'header_menu')}}
                     </div>
                 </div>
             </div>
+            @yield('main-banner')
         </div>
     </header>
     <main id="main" class="">
