@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
-
+use App\Http\Controllers\BannersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +19,15 @@ Route::get('/', [
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+    Route::get('banners', function(){
+        return view('admin_banner');
+    });
+    Route::get('banner/create', function(){
+        return view('admin_banner_create');
+    });
+    Route::post('banner/save', [
+        BannersController::class, 'save'
+    ]);
 });
 
 

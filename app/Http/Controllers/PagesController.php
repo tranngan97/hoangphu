@@ -20,7 +20,16 @@ class PagesController extends Controller
         }
         $page = Page::where('slug', $slug)->where('status', 'active');
         $page = $page->firstOrFail();
-        // return view($page->template)->with('page', $page);
         return view('page')->with('page', $page);
+    }
+
+    public function getAllPage()
+    {
+        $page = Page::where('status', 'active');
+        $data = [];
+        foreach ($page->get() as $page) {
+            $data[$page->id] = $page->title;
+        }
+        return $data;
     }
 }
