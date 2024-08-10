@@ -6,6 +6,7 @@ use App\Models\Test;
 use App\Models\TestCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Str;
 
 class TestsController extends Controller
 {
@@ -14,6 +15,14 @@ class TestsController extends Controller
         $categories = TestCategory::all();
         return view('test_index_index', compact('categories'));
     }
+
+    public function view($slug)
+    {
+        $test = Test::where('slug', $slug);
+        $test = $test->firstOrFail();
+        return view('test_index_view', compact('test'));
+    }
+
     public function save(Request $request)
     {
         $test = new Test();
@@ -27,6 +36,11 @@ class TestsController extends Controller
         }
         $test->category = $params['category'];
         $test->answer = $params['answer'];
+        $categoryNameSlug = str_replace(' ', '-', strtolower($this->getCategoryName($params['category'])));
+        $categoryName = strtolower($this->getCategoryName($params['category']));
+        $test->save();
+        $test->slug =  Str::slug('bai-thi-'. $categoryNameSlug.'-'.$test->test_id);
+        $test->slug_name = 'Bài thi '. $categoryName.' '.$test->test_id;
         $test->save();
         return Redirect::to('admin/tests');
     }
@@ -39,15 +53,20 @@ class TestsController extends Controller
         return Redirect::to('admin/tests');
     }
 
-    public function getAllTest()
+    public static function getAllTest()
     {
         return Test::get();
     }
 
-    public function getCategoryName($categoryId)
+    public static function getCategoryName($categoryId)
     {
         $category = TestCategory::where('id', $categoryId);
         $category = $category->firstOrFail();
         return $category->name;
+    }
+
+    public static function getByCategory($categoryId)
+    {
+        return Test::where('category', $categoryId)->get();
     }
 }

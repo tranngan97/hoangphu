@@ -4359,7 +4359,7 @@ img.mfp-img {
 .ux-menu-title {
     align-items: center;
     text-transform: uppercase;
-    font-size: .8em;
+    font-size: 1em;
     font-weight: 500;
     margin-top: 5px;
     color: #000;
@@ -9912,4 +9912,13 @@ li.wc-layered-nav-rating .star-rating {
 .logo img {
     max-width: 150px;
     max-height: 150px;
+}
+.test-categories .accordion::before {
+    content : "";
+    position: absolute;
+    left    : 0;
+    bottom  : 0;
+    height  : 1px;
+    width   : 50%;  /* or 100px */
+    border-bottom:1px solid magenta;
 }

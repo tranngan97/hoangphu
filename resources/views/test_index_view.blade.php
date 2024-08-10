@@ -18,7 +18,7 @@
                 $count = count($answers);
             @endphp
             <div class="answer-box" style="margin-top: 5%">
-                <form action="" method="post" id="answer-form">
+                <form action="" id="answer-form">
                     @for ($i = 0; $i <= $count; $i++)
                         <div class="flex-row" style="gap: 1rem;justify-content: unset">
                             <span>{{$i+1}} - </span>
