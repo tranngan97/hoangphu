@@ -23,9 +23,21 @@ class TestsController extends Controller
         return view('test_index_view', compact('test'));
     }
 
-    public function save(Request $request)
+    public function edit($id)
     {
-        $test = new Test();
+        $test = Test::where('test_id', $id);
+        $test = $test->firstOrFail();
+        return view('admin_test_edit', compact('test'));
+    }
+
+    public function save(Request $request, $id)
+    {
+        if ($id) {
+            $test = Test::where('test_id', $id);
+            $test = $test->firstOrFail();
+        } else {
+            $test = new Test();
+        }
         $params = $request->post();
         $file = $request->file('test_pdf');
         if ($file) {
@@ -45,9 +57,9 @@ class TestsController extends Controller
         return Redirect::to('admin/tests');
     }
 
-    public function delete($slug)
+    public function delete($id)
     {
-        $test = Test::where('test_id', $slug);
+        $test = Test::where('test_id', $id);
         $test = $test->firstOrFail();
         $test->delete();
         return Redirect::to('admin/tests');

@@ -48,8 +48,14 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('test/save', [
         TestsController::class, 'save'
     ]);
-    Route::get('test/delete/{slug}', [
+    Route::post('test/save/{id}', [
+        TestsController::class, 'save'
+    ]);
+    Route::get('test/delete/{id}', [
         TestsController::class, 'delete'
+    ]);
+    Route::get('test/edit/{id}', [
+        TestsController::class, 'edit'
     ]);
 });
 

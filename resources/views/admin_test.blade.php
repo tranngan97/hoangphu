@@ -42,9 +42,9 @@ $tests = \App\Http\Controllers\TestsController::getAllTest();
                                             <td>{{$categoryName}}</td>
                                             <td>{{$test['answer']}}</td>
                                             <td>
-{{--                                                <a href="{{url('admin/test/edit')}}" class="btn btn-primary btn-sm edit">--}}
-{{--                                                    <span>{{ __('voyager::generic.edit') }}</span>--}}
-{{--                                                </a>--}}
+                                                <a href="{{url('admin/test/edit', ['id' => $test['test_id']])}}" class="btn btn-primary btn-sm edit">
+                                                    <span>{{ __('voyager::generic.edit') }}</span>
+                                                </a>
                                                 <a href="{{url('admin/test/delete', ['id' => $test['test_id']])}}" class="btn btn-danger btn-sm delete">
                                                     <span>{{ __('voyager::generic.delete') }}</span>
                                                 </a>
