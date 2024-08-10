@@ -21,6 +21,10 @@ Route::get('/', [
 Route::get('/bai-thi', [
     TestsController::class, 'index'
 ]);
+Route::get('/bai-thi/{slug}', [
+    TestsController::class, 'view'
+]);
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
     Route::get('banners', function(){

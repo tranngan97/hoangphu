@@ -40,7 +40,7 @@ class BannersController extends Controller
         return $data;
     }
 
-    public function getByPage($pageId)
+    public static function getByPage($pageId)
     {
         if (count(Banner::get()) < 1) {
             return false;

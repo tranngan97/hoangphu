@@ -23,7 +23,7 @@ class PagesController extends Controller
         return view('page')->with('page', $page);
     }
 
-    public function getAllPage()
+    public function  getAllPage()
     {
         $page = Page::where('status', 'active');
         $data = [];

@@ -9,6 +9,9 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ asset('/css/boostrap.css') }}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
 <body class="">
@@ -42,23 +45,23 @@
             <div class="bg section-bg fill bg-fill bg-loaded">
             </div>
             <div class="section-content relative">
-                <div class="row row-large">
+                <div class="row">
                     <div id="col-15727256" class="col medium-3 small-12 large-3">
                         <div class="col-inner text-left dark">
                             <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_347332422">
                                 <div class="img-inner dark">
-                                    <img width="409" height="74" src="https://duhocbic.net/wp-content/uploads/2023/12/bic-education-white.png" class="attachment-original size-original" alt="" decoding="async" loading="lazy" srcset="https://duhocbic.net/wp-content/uploads/2023/12/bic-education-white.png 409w, https://duhocbic.net/wp-content/uploads/2023/12/bic-education-white-300x54.png 300w" sizes="(max-width: 409px) 100vw, 409px">
+                                    <img width="200" src="https://duhochoangphu.com.vn//storage/359836944_766592068802819_4378199925933335674_n.jpg" alt="">
                                 </div>
                             </div>
                             <div class="text">
-                                <h4>CÔNG TY TNHH BIC VIỆT NAM</h4>
+                                <h4>Du Học Và XKLD Hoàng Phú</h4>
                             </div>
                         </div>
                     </div>
                     <div class="col medium-2 small-12 large-2">
                         <div class="col-inner">
                             <div class="ux-menu stack stack-col justify-start ux-menu--divider-solid">
-                                <div class="ux-menu-title flex">Du học BIC	</div>
+                                <div class="ux-menu-title flex">Du học Hoàng Phú</div>
                                 <div class="ux-menu-link flex menu-item">
                                     <a class="ux-menu-link__link flex" href="https://duhocbic.net/chuong-trinh/du-hoc-han-quoc-2021/">
                                         <span class="ux-menu-link__text">Du học Hàn Quốc</span>
@@ -90,7 +93,7 @@
                     <div id="col-1959173211" class="col medium-2 small-12 large-2">
                         <div class="col-inner">
                             <div class="ux-menu stack stack-col justify-start ux-menu--divider-solid">
-                                <div class="ux-menu-title flex">XKLĐ BIC</div>
+                                <div class="ux-menu-title flex">XKLĐ Hoàng Phú</div>
                                 <div class="ux-menu-link flex menu-item">
                                     <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-han-quoc-2/">
                                         <span class="ux-menu-link__text">XKLĐ Hàn Quốc</span>
@@ -153,8 +156,21 @@
                     </div>
                     <div id="col-2001932309" class="col medium-3 small-12 large-3">
                         <div class="col-inner">
-                            <p class="lead uppercase" style="text-align: center;">Kết nối với BIC</p>
-                            <div class="social-icons follow-icons lienhe full-width text-center" style="font-size:130%"><a href="https://www.facebook.com/duhochanquochd89/" target="_blank" data-label="Facebook" rel="noopener noreferrer nofollow" class="icon plain facebook tooltip" title="Follow on Facebook" aria-label="Follow on Facebook"><i class="icon-facebook"></i></a><a href="https://www.instagram.com/duhocbic/" target="_blank" rel="noopener noreferrer nofollow" data-label="Instagram" class="icon plain  instagram tooltip" title="Follow on Instagram" aria-label="Follow on Instagram"><i class="icon-instagram"></i></a><a href="https://www.tiktok.com/duhocbic/" target="_blank" rel="noopener noreferrer nofollow" data-label="TikTok" class="icon plain tiktok tooltip" title="Follow on TikTok" aria-label="Follow on TikTok"><i class="icon-tiktok"></i></a><a href="https://www.twitter.com/duhocbic/" target="_blank" data-label="Twitter" rel="noopener noreferrer nofollow" class="icon plain  twitter tooltip" title="Follow on Twitter" aria-label="Follow on Twitter"><i class="icon-twitter"></i></a><a href="https://www.youtube.com.com/duhocbic/" target="_blank" rel="noopener noreferrer nofollow" data-label="YouTube" class="icon plain  youtube tooltip" title="Follow on YouTube" aria-label="Follow on YouTube"><i class="icon-youtube"></i></a></div>
+                            <div class="ux-menu stack stack-col justify-start">
+                                <div class="ux-menu-title">Kết nối với Hoàng Phú</div>
+                                <div class="ux-menu-link menu-item">
+                                    <i class="fa fa-facebook" style="margin-right: 1rem;"></i>
+                                    <a href="https://www.facebook.com/duhocxkldhoangphu" target="_blank">Follow on Facebook</a>
+                                </div>
+                                <div class="ux-menu-link menu-item">
+                                    <i class="fa fa-at" style="margin-right: 1rem;"></i>
+                                    <a href="mailto:duhoc-xkldhoangphu@gmail.com" target="_blank">duhoc-xkldhoangphu@gmail.com</a>
+                                </div>
+                                <div class="ux-menu-link menu-item">
+                                    <i class="fa fa-location-arrow" style="margin-right: 1rem;"></i>
+                                    <a href="https://maps.app.goo.gl/aSywjEhYnRBCk7u89" target="_blank">Khu đô thị ghẽ, Cẩm Giàng, Hải Dương, Việt Nam</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
