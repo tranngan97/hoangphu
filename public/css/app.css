@@ -7997,3 +7997,43 @@ html {
     padding-left: 15px;
     padding-right: 15px;
 }
+.account-html li {
+    list-style-type: none;
+}
+.account-html .name {
+    color: white;
+}
+.account-sub-menu {
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+    min-width: 200px;
+    margin: unset !important;
+    border: 2px solid white;
+    background-color: white;
+    top: 3.5rem;
+    left: 1rem;
+}
+.account-html.active > .account-sub-menu {
+    opacity: 1;
+}
+.account-sub-menu li {
+    display: block;
+    margin: 0;
+    vertical-align: top;
+}
+.account-sub-menu li>a {
+    color: #0c132c !important;
+    font-size: 1.5rem;
+    display: block;
+    line-height: 1.3;
+    padding: 10px 20px;
+}
+.account-sub-menu li>a:hover {
+    color: white !important;
+    background-color: #0c132c;
+}
+/*.account-html.active > .account-sub-menu > .menu-item {*/
+/*    background-color: #0c132c;*/
+/*}*/
+

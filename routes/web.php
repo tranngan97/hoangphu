@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\BannersController;
 use App\Http\Controllers\TestsController;
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,7 +25,18 @@ Route::get('/bai-thi', [
 Route::get('/bai-thi/{slug}', [
     TestsController::class, 'view'
 ]);
-
+Route::get('/dang-nhap', [
+    LoginController::class, 'index'
+]);
+Route::get('/dang-xuat', [
+    LoginController::class, 'logout'
+]);
+Route::post('/account/login/login', [
+    LoginController::class, 'login'
+]);
+Route::post('/account/login/register', [
+    LoginController::class, 'register'
+]);
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
     Route::get('banners', function(){
