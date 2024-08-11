@@ -14,7 +14,7 @@
     @endsection
     <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="{{ asset('/css/boostrap.css') }}" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -62,7 +62,7 @@
                                 </div>
                             </div>
                             <div class="text" style="text-align: center">
-                                <h4>Du Học Và XKLD Hoàng Phú</h4>
+                                <h5>CÔNG TY TNHH HOÀNG PHÚ VIỆT NAM</h5>
                             </div>
                         </div>
                     </div>
@@ -87,12 +87,12 @@
                                 </div>
                                 <div class="ux-menu-link flex menu-item">
                                     <a class="ux-menu-link__link flex" href="https://duhocbic.net/du-hoc-trung-quoc/">
-                                        <span class="ux-menu-link__text">Du học Trung Quốc</span>
+                                        <span class="ux-menu-link__text">Du học Đức</span>
                                     </a>
                                 </div>
                                 <div class="ux-menu-link flex menu-item">
                                     <a class="ux-menu-link__link flex" href="https://duhocbic.net/du-hoc-duc-2/">
-                                        <span class="ux-menu-link__text">Du học Đức</span>
+                                        <span class="ux-menu-link__text">Du học Úc</span>
                                     </a>
                                 </div>
                             </div>
@@ -119,12 +119,17 @@
                                 </div>
                                 <div class="ux-menu-link flex menu-item">
                                     <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-trung-quoc/">
-                                        <span class="ux-menu-link__text">XKLĐ Trung Quốc</span>
+                                        <span class="ux-menu-link__text">XKLĐ Đức</span>
                                     </a>
                                 </div>
                                 <div class="ux-menu-link flex menu-item">
                                     <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-duc/">
-                                        <span class="ux-menu-link__text">XKLĐ Đức</span>
+                                        <span class="ux-menu-link__text">XKLĐ Úc</span>
+                                    </a>
+                                </div>
+                                <div class="ux-menu-link flex menu-item">
+                                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-duc/">
+                                        <span class="ux-menu-link__text">XKLĐ Châu Âu</span>
                                     </a>
                                 </div>
                             </div>
@@ -159,24 +164,38 @@
                                         <span class="ux-menu-link__text">Đào tạo tiếng Anh</span>
                                     </a>
                                 </div>
+                                <div class="ux-menu-link flex menu-item">
+                                    <a class="ux-menu-link__link flex" href="https://duhocbic.net">
+                                        <span class="ux-menu-link__text">English Kids</span>
+                                    </a>
+                                </div>
+                                <div class="ux-menu-link flex menu-item">
+                                    <a class="ux-menu-link__link flex" href="https://duhocbic.net">
+                                        <span class="ux-menu-link__text">Tiền tiểu học</span>
+                                    </a>
+                                </div>
+                                <div class="ux-menu-link flex menu-item">
+                                    <a class="ux-menu-link__link flex" href="https://duhocbic.net">
+                                        <span class="ux-menu-link__text">Toán nhanh Soroban</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div id="col-2001932309" class="col medium-3 small-12 large-3">
                         <div class="col-inner">
                             <div class="ux-menu stack stack-col justify-start">
-                                <div class="ux-menu-title">Kết nối với Hoàng Phú</div>
+                                <div class="ux-menu-title" style="padding-top: 4%;">Kết nối với Hoàng Phú</div>
                                 <div class="ux-menu-link menu-item">
-                                    <i class="fa fa-facebook" style="margin-right: 1rem;"></i>
-                                    <a href="https://www.facebook.com/duhocxkldhoangphu" target="_blank">Follow on Facebook</a>
-                                </div>
-                                <div class="ux-menu-link menu-item">
-                                    <i class="fa fa-at" style="margin-right: 1rem;"></i>
-                                    <a href="mailto:duhoc-xkldhoangphu@gmail.com" target="_blank">duhoc-xkldhoangphu@gmail.com</a>
-                                </div>
-                                <div class="ux-menu-link menu-item">
-                                    <i class="fa fa-location-arrow" style="margin-right: 1rem;"></i>
-                                    <a href="https://maps.app.goo.gl/aSywjEhYnRBCk7u89" target="_blank">Khu đô thị ghẽ, Cẩm Giàng, Hải Dương, Việt Nam</a>
+                                    <a href="https://www.facebook.com/duhocxkldhoangphu" target="_blank">
+                                        <i class="fa-brands fa-3x fa-square-facebook" style="margin-right: 1rem"></i>
+                                    </a>
+                                    <a href="mailto:duhoc-xkldhoangphu@gmail.com" target="_blank">
+                                        <i class="fa-brands fa-3x fa-tiktok" style="margin-right: 1rem"></i>
+                                    </a>
+                                    <a href="https://maps.app.goo.gl/aSywjEhYnRBCk7u89" target="_blank">
+                                        <i class="fa-brands fa-3x fa-youtube"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
