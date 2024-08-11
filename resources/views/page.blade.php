@@ -1,4 +1,13 @@
 @extends('master')
+@section('description')
+    <title>{{$page->title}}</title>
+@endsection
+@section('description')
+    <meta name="description" content="{{$page->meta_description}}"/>
+@endsection
+@section('keywords')
+    <meta name="keywords" content="{{$page->meta_keywords}}"/>
+@endsection
 @php
     $topBannerImage = \App\Http\Controllers\BannersController::getByPage($page->id);
 @endphp

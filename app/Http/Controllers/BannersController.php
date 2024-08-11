@@ -46,8 +46,9 @@ class BannersController extends Controller
             return false;
         }
         $banner = Banner::where('page_id', $pageId);
-        $banner = $banner->firstOrFail();
-        if (!$banner) {
+        try {
+            $banner = $banner->firstOrFail();
+        } catch (\Exception $exception) {
             return false;
         }
         return str_replace('public', 'storage', $banner->image_url);

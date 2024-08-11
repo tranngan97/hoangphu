@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <!-- Tối ưu hóa công cụ tìm kiếm bởi Rank Math - https://rankmath.com/ -->
-    <title>Du Học Và XKLD Hoàng Phú</title>
-    <meta name="description" content="Chương trình Visa E9 hay còn gọi là chương trình EPS-Topik."/>
+    @yield('title')
+    @section('description')
+        <title>Du Học Và XKLD Hoàng Phú</title>
+    @endsection
+    @yield('description')
+    @yield('keywords')
+    @section('description')
+        <meta name="description" content="Du Học Và XKLD Hoàng Phú"/>
+    @endsection
     <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,7 +28,7 @@
         <div class="header-wrapper">
             {{menu('maintop', 'top_menu')}}
             <div class="header-main" id="masthead">
-                <div class="flex-row container" style="margin-top: 1rem;margin-bottom: 1rem;">
+                <div class="flex-row container">
                     <div id="logo" class="flex-col logo">
                         <!-- Header logo -->
                         <a href="https://duhochoangphu.com.vn/" title="Du Học Và XKLD Hoàng Phú" rel="home">

@@ -1,5 +1,5 @@
 <div class="top-menu-container header-top nav-dark">
-    <div class="flex-row container">
+    <div class="flex-row container-header">
         <div class="flex-col flex-left">
             <ul class="nav nav-left medium-nav-center nav-small  nav-divided">
                 @foreach($items as $menu_item)
