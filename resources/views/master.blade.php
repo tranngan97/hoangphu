@@ -61,7 +61,7 @@
                                     <img width="200" src="https://duhochoangphu.com.vn//storage/359836944_766592068802819_4378199925933335674_n.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="text">
+                            <div class="text" style="text-align: center">
                                 <h4>Du Học Và XKLD Hoàng Phú</h4>
                             </div>
                         </div>
