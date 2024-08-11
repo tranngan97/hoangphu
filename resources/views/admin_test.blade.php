@@ -25,8 +25,9 @@ $tests = \App\Http\Controllers\TestsController::getAllTest();
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>File</th>
                                         <th>Phân Loại</th>
+                                        <th>Câu hỏi</th>
+                                        <th>Câu trả lời</th>
                                         <th>Đáp án</th>
                                         <th class="actions dt-not-orderable">{{ __('voyager::generic.actions') }}</th>
                                     </tr>
@@ -35,12 +36,39 @@ $tests = \App\Http\Controllers\TestsController::getAllTest();
                                     @foreach($tests as $test)
                                         <tr>
                                             <td>{{$test['test_id']}}</td>
-                                            <td><a href="{{URL::to(str_replace('public', 'storage', $test['file_url']))}}" target="_blank">{{$test['file_name']}}</a></td>
                                             @php
                                                 $categoryName = \App\Http\Controllers\TestsController::getCategoryName($test['category']);
                                             @endphp
                                             <td>{{$categoryName}}</td>
-                                            <td>{{$test['answer']}}</td>
+                                            <td>
+                                                @php
+                                                    $questions = json_decode($test->question, true);
+                                                @endphp
+                                                @foreach($questions as $number => $question)
+                                                    <div><span>{{$number}}.</span><span>{{$question}}</span></div>
+                                                @endforeach
+                                            </td>
+                                            <td>
+                                                @php
+                                                    $anwsers = json_decode($test->anwser, true);
+                                                @endphp
+                                                @foreach($anwsers as $number => $anwser)
+                                                    <div>
+                                                        <span>{{$number}}.</span>
+                                                        @foreach ($anwser as $index => $value)
+                                                            <span>{{$index}}:</span><span>{{$value}}</span>
+                                                        @endforeach
+                                                    <div>
+                                                @endforeach
+                                            </td>
+                                            <td>
+                                                @php
+                                                    $corrects = json_decode($test->correct_anwser, true);
+                                                @endphp
+                                                @foreach($corrects as $number => $correct)
+                                                    <span>{{$number}}.</span><span>{{$correct}}</span>
+                                                @endforeach
+                                            </td>
                                             <td>
                                                 <a href="{{url('admin/test/edit', ['id' => $test['test_id']])}}" class="btn btn-primary btn-sm edit">
                                                     <span>{{ __('voyager::generic.edit') }}</span>

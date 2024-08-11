@@ -24,13 +24,6 @@
                         {{ csrf_field() }}
                         <div class="panel-body">
                             <div class="form-group col-md-12">
-                                <label class="control-label" for="test_pdf">PDF File (Image file)</label>
-                                <div class="controls">
-                                    <input style="padding: unset !important;" id="test_pdf" class="form-control" type="file" data-name="test_pdf" name="test_pdf">
-                                    <a href="{{URL::to(str_replace('public', 'storage', $test->file_url))}}">{{$test->file_name}}</a>
-                                </div>
-                            </div>
-                            <div class="form-group col-md-12">
                                 <label class="control-label" for="category">Phân Loại</label>
                                 <div class="controls">
                                     <select id="category_select" name="category">
@@ -41,9 +34,19 @@
                                 </div>
                             </div>
                             <div class="form-group col-md-12">
-                                <label class="control-label" for="answer">Đáp án</label>
-                                <div class="controls">
-                                    <input style="padding: unset !important;" value="{{$test->answer}}" id="answer" name="answer" class="form-control" type="text">
+                                <label class="control-label" for="answer">Câu hỏi:</label><div style="margin-left: 5%;" id="add-question" class="button" onclick="addQuestion()">Thêm câu hỏi</div>
+                                <div class="controls" id="question-box">
+                                    @foreach($data as $number => $questionData)
+                                        <div style="margin-top: 1%" class="question-box">
+                                            <h4>Câu {{$number}}</h4>
+                                            <textarea rows="3" style="width: 500px" name="question_{{$number}}">{{$data[$number]['question']}}</textarea>
+                                            <div style="margin-top: 2%"><span style="margin-right: 1%">A</span><input type="text" name="question_{{$number}}_A" value="{{$data[$number]['answer']['A']}}"></div>
+                                            <div style="margin-top: 2%"><span style="margin-right: 1%">B</span><input type="text" name="question_{{$number}}_B" value="{{$data[$number]['answer']['B']}}"></div>
+                                            <div style="margin-top: 2%"><span style="margin-right: 1%">C</span><input type="text" name="question_{{$number}}_C" value="{{$data[$number]['answer']['C']}}"></div>
+                                            <div style="margin-top: 2%"><span style="margin-right: 1%">D</span><input type="text" name="question_{{$number}}_D" value="{{$data[$number]['answer']['D']}}"></div>
+                                            <div style="margin-top: 2%"><span style="margin-right: 1%">Đáp án</span><input type="text" name="answer_{{$number}}" value="{{$data[$number]['correct']}}"></div>
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
