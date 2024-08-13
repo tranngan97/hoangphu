@@ -30,13 +30,11 @@ class LoginController extends Controller
             ];
             if (Auth::attempt($credentials)) {
                 $request->session()->regenerate();
-                return redirect()->intended('/');
-            } else {
-                return redirect()->intended('/dang-nhap');
             }
         } catch (\Exception $e) {
-            return redirect()->intended('/dang-nhap');
+            return Redirect::to('/');
         }
+        return Redirect::to('/');
     }
 
     public function register(Request $request)
@@ -45,11 +43,12 @@ class LoginController extends Controller
         $newAccount = new User();
         $newAccount->email = $params['email'];
         $newAccount->role_id = 2;
-        $newAccount->name = $params['first_name']. ' '. $params['last_name'];
+        $newAccount->name = $params['name'];
         $newAccount->phone = $params['phone'];
+        $newAccount->dob = strtotime($params['dob']);
         $newAccount->password = Hash::make($params['password']);
         $newAccount->save();
-        return Redirect::to('dang-nhap');
+        return Redirect::to('/')->with('message', 'Đăng ký thành công');
     }
 
     public function logout(Request $request) {

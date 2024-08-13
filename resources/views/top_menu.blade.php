@@ -44,7 +44,7 @@
                 @if(!$currentUser)
                     <li class="html header-button-1">
                         <div class="header-button">
-                            <button type="button" class="button success is-xlarge" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <button type="button" class="button success is-xlarge" id="login-button" data-bs-toggle="modal" data-bs-target="#loginModal">
                                 Đăng nhập / Đăng ký
                             </button>
                         </div>
@@ -107,15 +107,9 @@
                                         <!-- CSRF TOKEN -->
                                         {{ csrf_field() }}
                                         <div class="form-group">
-                                            <label class="control-label" for="first_name">Họ</label>
+                                            <label class="control-label" for="name">Họ và tên</label>
                                             <div class="controls">
-                                                <input id="first_name" name="first_name" class="form-control" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label" for="last_name">Tên</label>
-                                            <div class="controls">
-                                                <input id="last_name" name="last_name" class="form-control" type="text">
+                                                <input id="name" name="name" class="form-control" type="text">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -125,15 +119,23 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label class="control-label" for="password">Mật khẩu</label>
+                                            <div class="controls">
+                                                <input id="password" name="password" class="form-control" type="password">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
                                             <label class="control-label" for="phone">Số điện thoại</label>
                                             <div class="controls">
                                                 <input id="phone" name="phone" class="form-control" type="text">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label" for="password">Mật khẩu</label>
+                                            <label class="control-label" for="phone">Ngày sinh</label>
                                             <div class="controls">
-                                                <input id="password" name="password" class="form-control" type="password">
+                                                <div class="input-group date" id="datepicker">
+                                                    <input type="text" name="dob" class="form-control" id="date"/>
+                                                </div>
                                             </div>
                                         </div>
                                         <button type="submit" class="btn btn-primary save" style="margin-top: 2%">Đăng ký</button>
@@ -147,6 +149,19 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    $('#loginModal').on('shown.bs.modal', function() {
+        $('.input-group.date').datepicker({
+            format: "dd/mm/yyyy",
+            todayHighlight: true,
+            container: '#loginModal #datepicker',
+            autoclose: true,
+            isInline: false
+        }).on('changeDate', function (ev) {
+            $(this).datepicker('hide');
+        });
+    });
+</script>
 <script type="text/javascript">
     var accountMenu = document.querySelector('.account-html');
     if (accountMenu) {
