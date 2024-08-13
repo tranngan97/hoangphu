@@ -25,3 +25,6 @@ function triggerSubmit(event, answer)
     $('.answer-box').append(htmlButton);
     $('#answer-form').hide();
 }
+function openLoginPopup() {
+
+}

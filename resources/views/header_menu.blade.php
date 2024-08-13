@@ -30,9 +30,6 @@ $class = !isset($children)
             <a href="{{ url($item->link()) }}" target="{{ $item->target }}" style="{{ $styles }}" {!! $linkAttributes ?? '' !!}>
                 {!! $icon !!}
                 <span>{{ $item->title }}</span>
-                @if(!$originalItem->children->isEmpty())
-                    <i class="fa fa-angle-down"></i>
-                @endif
             </a>
             @if(!$originalItem->children->isEmpty())
                 @include('header_menu', ['items' => $originalItem->children, 'children' => true])

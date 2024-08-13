@@ -13,9 +13,8 @@
         <div class="flex-col flex-right">
             <ul class="nav top-bar-nav nav-right nav-small nav-divided top-buttons">
                 @if($currentUser !== NULL && $currentUser->email)
-                    <li class="account-html has-dropdown" style="font-size: 1.5rem;">
-                        <span class="name dropdown-toggle" data-toggle="dropdown">{{$currentUser->name}}</span>
-                        <i class="fa fa-angle-down" style="color: white"></i>
+                    <li class="account-html has-dropdown">
+                        <span class="name dropdown-toggle" data-toggle="dropdown" style="text-transform: uppercase;">{{$currentUser->name}}</span>
                         <ul class="account-sub-menu">
                             <li class="menu-item ">
                                 <a href="" target="_self" style="">
@@ -45,7 +44,7 @@
                 @if(!$currentUser)
                     <li class="html header-button-1">
                         <div class="header-button">
-                            <a href="{{url('dang-nhap')}}" class="button success is-xlarge">
+                            <a href="{{url('dang-nhap')}}" class="button success is-xlarge" onclick="openLoginPopup()">
                                 <span>Đăng nhập / Đăng ký</span>
                             </a>
                         </div>

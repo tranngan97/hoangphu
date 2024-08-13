@@ -42,16 +42,19 @@ class BannersController extends Controller
 
     public static function getByPage($pageId)
     {
+        $imageUrls = [];
         if (count(Banner::get()) < 1) {
             return false;
         }
-        $banner = Banner::where('page_id', $pageId);
         try {
-            $banner = $banner->firstOrFail();
+            $banners = Banner::where('page_id', $pageId)->get();
+            foreach ($banners as $banner) {
+                $imageUrls[] = str_replace('public', 'storage', $banner->image_url);
+            }
         } catch (\Exception $exception) {
             return false;
         }
-        return str_replace('public', 'storage', $banner->image_url);
+        return $imageUrls;
     }
 
     public function delete($slug)
