@@ -44,6 +44,12 @@ Route::get('/tai-khoan', [
 Route::post('/account/edit/{id}', [
     AccountController::class, 'edit'
 ]);
+Route::post('/save/test/account', [
+    AccountController::class, 'saveTestResult'
+]);
+Route::get('/lich-su-bai-thi', [
+    AccountController::class, 'testHistory'
+]);
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
     Route::get('banners', function(){

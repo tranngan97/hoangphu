@@ -22,7 +22,7 @@
                                 </a>
                             </li>
                             <li class="menu-item ">
-                                <a href="" target="_self" style="">
+                                <a href="{{URL::to('/lich-su-bai-thi')}}" target="_self" style="">
                                     <span>Bài kiểm tra của tôi</span>
                                 </a>
                             </li>
