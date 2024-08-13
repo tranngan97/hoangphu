@@ -13,31 +13,28 @@
                         $testsByCategory = \App\Http\Controllers\TestsController::getByCategory($category->id);
                     @endphp
                     @if(count($testsByCategory) > 0)
-                    <div class="accordion" id="test-category-collapsible-{{$category->id}}">
-                        <div class="card">
-                            <div class="card-header" id="heading{{$category->id}}">
-                                <h5 class="mb-0">
-                                    <i class="fa fa-caret-right"></i>
-                                    <span style="font-size: 2rem;" class="btn head-trigger" type="button" data-toggle="collapse" data-target="#collapse{{$category->id}}" aria-expanded="true" aria-controls="{{$category->name}}">
+                        <div class="accordion" id="test-accordion" style="margin-top: 2%">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="title-{{$category->id}}">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#test-{{$category->id}}" aria-expanded="true" aria-controls="test-{{$category->id}}">
                                         {{$category->name}}
-                                    </span>
-                                </h5>
-                            </div>
-                            <div id="collapse{{$category->id}}" class="collapse" aria-labelledby="heading{{$category->id}}" data-parent="#test-category-collapsible-{{$category->id}}">
-                                <div class="card-body">
-                                    @php
-                                        $i = 1;
-                                    @endphp
-                                    @foreach($testsByCategory as $test)
-                                        <div><a href="{{url('bai-thi', ['slug' => $test->slug])}}">{{$i. '- '. $test->slug_name}}</a></div>
+                                    </button>
+                                </h2>
+                                <div id="test-{{$category->id}}" class="accordion-collapse collapse" aria-labelledby="title-{{$category->id}}" data-bs-parent="#test-accordion">
+                                    <div class="accordion-body">
                                         @php
-                                            $i++;
+                                            $i = 1;
                                         @endphp
-                                    @endforeach
+                                        @foreach($testsByCategory as $test)
+                                            <div><a href="{{url('bai-thi', ['slug' => $test->slug])}}">{{$i. '- '. $test->slug_name}}</a></div>
+                                            @php
+                                                $i++;
+                                            @endphp
+                                        @endforeach
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     @endif
                 @endforeach
             </div>
