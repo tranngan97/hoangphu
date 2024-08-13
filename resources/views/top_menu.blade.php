@@ -17,7 +17,7 @@
                         <span class="name dropdown-toggle" data-toggle="dropdown" style="text-transform: uppercase;">{{$currentUser->name}}</span>
                         <ul class="account-sub-menu">
                             <li class="menu-item ">
-                                <a href="" target="_self" style="">
+                                <a href="{{URL::to('/tai-khoan')}}" target="_self" style="">
                                     <span>Thông tin tài khoản</span>
                                 </a>
                             </li>

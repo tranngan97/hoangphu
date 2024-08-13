@@ -743,10 +743,6 @@ body.framed,body.framed header,body.framed .header-wrapper,body.boxed,body.boxed
     justify-content: center
 }
 
-.header .flex-row {
-    height: 100%
-}
-
 .flex-col {
     max-height: 100%
 }
@@ -2604,7 +2600,6 @@ li.hide-title>a {
 
 .button span {
     display: inline-block;
-    line-height: 1.6
 }
 
 .button.is-outline {
@@ -8009,7 +8004,7 @@ html {
     margin: unset !important;
     border: 2px solid white;
     background-color: white;
-    top: 3.5rem;
+    top: 1.5rem;
     left: 1rem;
 }
 .account-html.active > .account-sub-menu {
@@ -8029,6 +8024,9 @@ html {
 .account-sub-menu li>a:hover {
     color: white !important;
     background-color: #0c132c;
+}
+body {
+    font-family: sans-serif !important;
 }
 /*.account-html.active > .account-sub-menu > .menu-item {*/
 /*    background-color: #0c132c;*/

@@ -5,6 +5,7 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\BannersController;
 use App\Http\Controllers\TestsController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AccountController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,6 +37,12 @@ Route::post('/account/login/login', [
 ]);
 Route::post('/account/login/register', [
     LoginController::class, 'register'
+]);
+Route::get('/tai-khoan', [
+    AccountController::class, 'index'
+]);
+Route::post('/account/edit/{id}', [
+    AccountController::class, 'edit'
 ]);
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
