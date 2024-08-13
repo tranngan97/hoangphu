@@ -44,9 +44,9 @@
                 @if(!$currentUser)
                     <li class="html header-button-1">
                         <div class="header-button">
-                            <a href="{{url('dang-nhap')}}" class="button success is-xlarge" onclick="openLoginPopup()">
-                                <span>Đăng nhập / Đăng ký</span>
-                            </a>
+                            <button type="button" class="button success is-xlarge" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                Đăng nhập / Đăng ký
+                            </button>
                         </div>
                     </li>
                 @endif
@@ -54,12 +54,107 @@
         </div>
     </div>
 </div>
+
+<div class="modal" id="loginModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="position: absolute;right: 0;font-size: 20px;">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="flex-row">
+                    <div class="popup-image" style="max-width: 50%;">
+                        <img src="https://duhochoangphu.com.vn//storage/279540801_1320825471741387_6586347156981394922_n.jpg">
+                    </div>
+                    <div class="login-form" style="width: 45%;">
+                        <nav style="position: absolute; top: 5%;">
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Đăng nhập</button>
+                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Đăng ký</button>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <div class="login-form" style="padding-top: 2%; width: 90%;">
+                                    <form role="form"
+                                          class="form-login"
+                                          action="{{url('account/login/login')}}"
+                                          method="POST" enctype="multipart/form-data">
+                                        <!-- CSRF TOKEN -->
+                                        {{ csrf_field() }}
+                                        <div class="form-group">
+                                            <label class="control-label" for="email">Email / Số điện thoại</label>
+                                            <div class="controls">
+                                                <input id="email" name="email" class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label" for="password">Mật khẩu</label>
+                                            <div class="controls">
+                                                <input id="password" name="password" class="form-control" type="password">
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary save" style="margin-top: 2%">Đăng nhập</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <div class="register-form" style="padding-top: 2%; width: 90%;">
+                                    <form role="form"
+                                          class="form-login"
+                                          action="{{url('account/login/register')}}"
+                                          method="POST" enctype="multipart/form-data">
+                                        <!-- CSRF TOKEN -->
+                                        {{ csrf_field() }}
+                                        <div class="form-group">
+                                            <label class="control-label" for="first_name">Họ</label>
+                                            <div class="controls">
+                                                <input id="first_name" name="first_name" class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label" for="last_name">Tên</label>
+                                            <div class="controls">
+                                                <input id="last_name" name="last_name" class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label" for="email">Email</label>
+                                            <div class="controls">
+                                                <input id="email" name="email" class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label" for="phone">Số điện thoại</label>
+                                            <div class="controls">
+                                                <input id="phone" name="phone" class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label" for="password">Mật khẩu</label>
+                                            <div class="controls">
+                                                <input id="password" name="password" class="form-control" type="password">
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary save" style="margin-top: 2%">Đăng ký</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script type="text/javascript">
     var accountMenu = document.querySelector('.account-html');
-    accountMenu.addEventListener('mouseenter', function(event) {
-        event.target.classList.add('active');
-    })
-    accountMenu.addEventListener('mouseleave', function(event) {
-        event.target.classList.remove('active');
-    })
+    if (accountMenu) {
+        accountMenu.addEventListener('mouseenter', function(event) {
+            event.target.classList.add('active');
+        })
+        accountMenu.addEventListener('mouseleave', function(event) {
+            event.target.classList.remove('active');
+        })
+    }
 </script>
