@@ -27,11 +27,11 @@
 <body class="">
 <div id="wrapper">
     <header id="header" class="header">
-        <div class="header-wrapper">
+        <div class="header-wrapper d-none d-sm-block">
             {{menu('maintop', 'top_menu')}}
             <div class="header-main" id="masthead">
-                <div class="flex-row container col d-xl-none d-xxl-block">
-                    <div id="logo" class="flex-col logo col-md-12">
+                <div class="flex-row container col">
+                    <div id="logo" class="flex-col logo">
                         <!-- Header logo -->
                         <a href="https://duhochoangphu.com.vn/" title="Du Học Và XKLD Hoàng Phú" rel="home">
                             <img src="https://duhochoangphu.com.vn//storage/359836944_766592068802819_4378199925933335674_n.jpg" class="header_logo header-logo" alt="Du học và xuất khẩu lao động BIC">
@@ -42,8 +42,26 @@
                     </div>
                 </div>
             </div>
-            @yield('main-banner')
         </div>
+        <div class="header-wrapper-menu-mobile d-block d-sm-none">
+            <div id="logo-mobile" class="logo">
+                <!-- Header logo -->
+                <a href="https://duhochoangphu.com.vn/" title="Du Học Và XKLD Hoàng Phú" rel="home">
+                    <img src="https://duhochoangphu.com.vn//storage/359836944_766592068802819_4378199925933335674_n.jpg"
+                         class="header_logo header-logo" alt="Du Học Và XKLD Hoàng Phú">
+                </a>
+            </div>
+            <nav class="navbar navbar-dark">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+            <div class="collapse" id="navbarToggleExternalContent">
+                {{menu('maintop', 'top_menu_mobile')}}
+                {{menu('main', 'header_menu_mobile')}}
+            </div>
+        </div>
+        @yield('main-banner')
     </header>
     <main id="main" class="">
         <div id="content" role="main" class="content-area">
@@ -51,7 +69,7 @@
         </div>
     </main>
     <footer id="footer" class="footer-wrapper">
-        <section class="section footerbic dark">
+        <section class="section footer-desktop footerbic dark d-none d-sm-block">
             <div class="row row-full-width" style="padding-top: 3%">
                 <div class="col col-md-1"></div>
                 <div id="col-15727256" class="col col-md-2">
@@ -203,6 +221,130 @@
                 <div class="col col-md-1"></div>
             </div>
         </section>
+        <section class="footer-mobile footerbic dark d-block d-sm-none">
+            <div class="section-mobile flex-row" style="padding-left: 5%;padding-right: 5%;">
+                <img style="max-width: 75px; border-radius: 50%" src="https://duhochoangphu.com.vn//storage/359836944_766592068802819_4378199925933335674_n.jpg" alt="">
+                <p style="font-size: 0.8rem;">CÔNG TY TNHH HOÀNG PHÚ VIỆT NAM</p>
+            </div>
+            <div class="section-mobile" style="padding-left: 5%;padding-right: 5%;">
+                <div class="ux-menu-title flex">Du học Hoàng Phú</div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/chuong-trinh/du-hoc-han-quoc-2021/">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Hàn Quốc</span>
+                    </a>
+                </div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/chuong-trinh/du-hoc-nhat-ban-2/">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Nhật Bản</span>
+                    </a>
+                </div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/du-hoc-dai-loan-2/">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Đài Loan</span>
+                    </a>
+                </div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/du-hoc-trung-quoc/">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Đức</span>
+                    </a>
+                </div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/du-hoc-duc-2/">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Úc</span>
+                    </a>
+                </div>
+            </div>
+            <div class="section-mobile" style="padding-left: 5%;padding-right: 5%;">
+                <div class="ux-menu-title flex">XKLĐ Hoàng Phú</div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-han-quoc-2/">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Hàn Quốc</span>
+                    </a>
+                </div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/chuong-trinh/xuat-khau-lao-dong-nhat-ban-2/">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Nhật Bản</span>
+                    </a>
+                </div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/chuong-trinh/xuat-khau-lao-dong-dai-loan-2/">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Đài Loan</span>
+                    </a>
+                </div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-trung-quoc/">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Đức</span>
+                    </a>
+                </div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-duc/">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Úc</span>
+                    </a>
+                </div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-duc/">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Châu Âu</span>
+                    </a>
+                </div>
+            </div>
+            <div class="section-mobile" style="padding-left: 5%;padding-right: 5%;">
+                <div class="ux-menu-title flex">Đào tạo</div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/dao-tao-tieng-han/">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Hàn</span>
+                    </a>
+                </div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/tin-tuc/dao-tao-tieng-nhat/">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Nhật</span>
+                    </a>
+                </div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Đức</span>
+                    </a>
+                </div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Trung</span>
+                    </a>
+                </div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Anh</span>
+                    </a>
+                </div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">English Kids</span>
+                    </a>
+                </div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Tiền tiểu học</span>
+                    </a>
+                </div>
+                <div class="ux-menu-link flex menu-item">
+                    <a class="ux-menu-link__link flex" href="https://duhocbic.net">
+                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Toán nhanh Soroban</span>
+                    </a>
+                </div>
+            </div>
+            <div class="section-mobile" style="padding-left: 5%;padding-right: 5%;padding-bottom: 5%">
+                <div class="ux-menu-title" style="padding-top: 4%;">Kết nối với Hoàng Phú</div>
+                <div class="ux-menu-link menu-item">
+                    <a href="https://www.facebook.com/duhocxkldhoangphu" target="_blank">
+                        <i class="fa-brands fa-2x fa-square-facebook" style="margin-right: 1rem"></i>
+                    </a>
+                    <a href="mailto:duhoc-xkldhoangphu@gmail.com" target="_blank">
+                        <i class="fa-brands fa-2x fa-tiktok" style="margin-right: 1rem"></i>
+                    </a>
+                    <a href="https://maps.app.goo.gl/aSywjEhYnRBCk7u89" target="_blank">
+                        <i class="fa-brands fa-2x fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
     </footer>
     <div class="contact-box-bottom animate__backInRight contact1">
         <a class="contact-box-wrapper nut-chat-facebook" href="https://www.facebook.com/duhocbicvietnam" target="_blank" style="opacity: 1;">
@@ -228,6 +370,125 @@
             </div>
         </a>
     </div>
+    <div class="modal" id="loginModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="position: absolute;right: 0;font-size: 20px;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="flex-row">
+                        <div class="popup-image" style="max-width: 50%;">
+                            <img src="https://duhochoangphu.com.vn//storage/279540801_1320825471741387_6586347156981394922_n.jpg">
+                        </div>
+                        <div class="login-form" style="width: 45%;">
+                            <nav style="position: absolute; top: 5%;">
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Đăng nhập</button>
+                                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Đăng ký</button>
+                                </div>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                    <div class="login-form" style="padding-top: 2%; width: 90%;">
+                                        <form role="form"
+                                              class="form-login"
+                                              action="{{url('account/login/login')}}"
+                                              method="POST" enctype="multipart/form-data">
+                                            <!-- CSRF TOKEN -->
+                                            {{ csrf_field() }}
+                                            <div class="form-group">
+                                                <label class="control-label" for="email">Email / Số điện thoại</label>
+                                                <div class="controls">
+                                                    <input id="email" name="email" class="form-control" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label" for="password">Mật khẩu</label>
+                                                <div class="controls">
+                                                    <input id="password" name="password" class="form-control" type="password">
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary save" style="margin-top: 2%">Đăng nhập</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                    <div class="register-form" style="padding-top: 2%; width: 90%;">
+                                        <form role="form"
+                                              class="form-login"
+                                              action="{{url('account/login/register')}}"
+                                              method="POST" enctype="multipart/form-data">
+                                            <!-- CSRF TOKEN -->
+                                            {{ csrf_field() }}
+                                            <div class="form-group">
+                                                <label class="control-label" for="name">Họ và tên</label>
+                                                <div class="controls">
+                                                    <input id="name" name="name" class="form-control" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label" for="email">Email</label>
+                                                <div class="controls">
+                                                    <input id="email" name="email" class="form-control" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label" for="password">Mật khẩu</label>
+                                                <div class="controls">
+                                                    <input id="password" name="password" class="form-control" type="password">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label" for="phone">Số điện thoại</label>
+                                                <div class="controls">
+                                                    <input id="phone" name="phone" class="form-control" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label" for="phone">Ngày sinh</label>
+                                                <div class="controls">
+                                                    <div class="input-group date" id="datepicker">
+                                                        <input type="text" name="dob" class="form-control" id="date"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary save" style="margin-top: 2%">Đăng ký</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script type="text/javascript">
+    $('#loginModal').on('shown.bs.modal', function() {
+        $('.input-group.date').datepicker({
+            format: "dd/mm/yyyy",
+            todayHighlight: true,
+            container: '#loginModal #datepicker',
+            autoclose: true,
+            isInline: false
+        }).on('changeDate', function (ev) {
+            $(this).datepicker('hide');
+        });
+    });
+</script>
+<script type="text/javascript">
+    $('.input-group-login.date').datepicker({
+        format: "dd/mm/yyyy",
+        todayHighlight: true,
+        container: '.register-form #datepicker-login',
+        autoclose: true,
+        isInline: false
+    }).on('changeDate', function (ev) {
+        $(this).datepicker('hide');
+    });
+</script>
 </body>
 </html>

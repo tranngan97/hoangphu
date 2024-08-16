@@ -8060,6 +8060,66 @@ body {
         display: inline-grid;
     }
 }
+.header-wrapper-menu-mobile {
+    background-color: #0c132c;
+    ul {
+        margin-bottom: unset !important;
+    }
+    .navbar {
+        position: absolute;
+        left: 3%;
+        top: 5%;
+    }
+    .logo {
+        padding-bottom: 5%;
+        img{
+            max-width: 75px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 2%;
+        }
+    }
+    .top-menu-container {
+        margin-left: 5%;
+        ul {
+            list-style-type: none;
+            li {
+                margin-top: 5%;
+            }
+        }
+        a {
+            color: white !important;
+        }
+    }
+    .dropdown-menu-mobile {
+        margin-left: 5%;
+        padding-bottom: 5%;
+        list-style-type: none;
+        a {
+            color: white !important;
+        }
+        .sub-menu-mobile {
+            list-style-type: none;
+            margin-top: 3% !important;
+            margin-left: 5% !important;
+        }
+    }
+}
+.footer-wrapper {
+    background-color: #0c132c;
+    .section-mobile {
+        padding-top: 5%;
+        position: relative;
+        min-height: auto;
+        width: 100%;
+    }
+}
+.input-group-login {
+    .datepicker-dropdown {
+        left: 15% !important;
+        top: unset !important;
+    }
+}
 /*.account-html.active > .account-sub-menu > .menu-item {*/
 /*    background-color: #0c132c;*/
 /*}*/
