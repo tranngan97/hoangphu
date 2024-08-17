@@ -222,112 +222,107 @@
             </div>
         </section>
         <section class="footer-mobile footerbic dark d-block d-sm-none">
-            <div class="section-mobile flex-row" style="padding-left: 5%;padding-right: 5%;">
+            <div class="section-mobile flex-row" style="padding-left: 10%;padding-right: 10%;">
                 <img style="max-width: 75px; border-radius: 50%" src="https://duhochoangphu.com.vn//storage/359836944_766592068802819_4378199925933335674_n.jpg" alt="">
                 <p style="font-size: 0.8rem;">CÔNG TY TNHH HOÀNG PHÚ VIỆT NAM</p>
             </div>
             <div class="section-mobile" style="padding-left: 5%;padding-right: 5%;">
-                <div class="ux-menu-title flex">Du học Hoàng Phú</div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/chuong-trinh/du-hoc-han-quoc-2021/">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Hàn Quốc</span>
-                    </a>
-                </div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/chuong-trinh/du-hoc-nhat-ban-2/">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Nhật Bản</span>
-                    </a>
-                </div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/du-hoc-dai-loan-2/">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Đài Loan</span>
-                    </a>
-                </div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/du-hoc-trung-quoc/">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Đức</span>
-                    </a>
-                </div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/du-hoc-duc-2/">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Úc</span>
-                    </a>
-                </div>
-            </div>
-            <div class="section-mobile" style="padding-left: 5%;padding-right: 5%;">
-                <div class="ux-menu-title flex">XKLĐ Hoàng Phú</div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-han-quoc-2/">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Hàn Quốc</span>
-                    </a>
-                </div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/chuong-trinh/xuat-khau-lao-dong-nhat-ban-2/">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Nhật Bản</span>
-                    </a>
-                </div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/chuong-trinh/xuat-khau-lao-dong-dai-loan-2/">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Đài Loan</span>
-                    </a>
-                </div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-trung-quoc/">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Đức</span>
-                    </a>
-                </div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-duc/">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Úc</span>
-                    </a>
-                </div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-duc/">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Châu Âu</span>
-                    </a>
+                <div class="accordion" id="footer-accordion-1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="title">
+                            <span class="ux-menu-title" data-bs-toggle="collapse" data-bs-target="#footer-menu-1" aria-expanded="true" aria-controls="footer-menu-1" style="padding-top: 4%;">Du học Hoàng Phú</span>
+                            <i style="color: white;" class="fa fa-caret-down"></i>
+                        </h2>
+                        <div id="footer-menu-1" class="accordion-collapse collapse" aria-labelledby="title" data-bs-parent="#footer-accordion-1">
+                            <div class="accordion-body">
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net/chuong-trinh/du-hoc-han-quoc-2021/">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Hàn Quốc</span>
+                                </a>
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net/chuong-trinh/du-hoc-nhat-ban-2/">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Nhật Bản</span>
+                                </a>
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net/du-hoc-dai-loan-2/">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Đài Loan</span>
+                                </a>
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net/du-hoc-trung-quoc/">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Đức</span>
+                                </a>
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net/du-hoc-duc-2/">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Úc</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="section-mobile" style="padding-left: 5%;padding-right: 5%;">
-                <div class="ux-menu-title flex">Đào tạo</div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/dao-tao-tieng-han/">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Hàn</span>
-                    </a>
+                <div class="accordion" id="footer-accordion-2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="title">
+                            <span class="ux-menu-title" data-bs-toggle="collapse" data-bs-target="#footer-menu-2" aria-expanded="true" aria-controls="footer-menu-2" style="padding-top: 4%;">XKLĐ Hoàng Phú</span>
+                            <i style="color: white;" class="fa fa-caret-down"></i>
+                        </h2>
+                        <div id="footer-menu-2" class="accordion-collapse collapse" aria-labelledby="title" data-bs-parent="#footer-accordion-2">
+                            <div class="accordion-body">
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-han-quoc-2/">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Hàn Quốc</span>
+                                </a>
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net/chuong-trinh/xuat-khau-lao-dong-nhat-ban-2/">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Nhật Bản</span>
+                                </a>
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net/chuong-trinh/xuat-khau-lao-dong-dai-loan-2/">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Đài Loan</span>
+                                </a>
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-trung-quoc/">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Đức</span>
+                                </a>
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-duc/">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Úc</span>
+                                </a>
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-duc/">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Châu Âu</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net/tin-tuc/dao-tao-tieng-nhat/">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Nhật</span>
-                    </a>
-                </div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Đức</span>
-                    </a>
-                </div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Trung</span>
-                    </a>
-                </div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Anh</span>
-                    </a>
-                </div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">English Kids</span>
-                    </a>
-                </div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Tiền tiểu học</span>
-                    </a>
-                </div>
-                <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="https://duhocbic.net">
-                        <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Toán nhanh Soroban</span>
-                    </a>
+            </div>
+            <div class="section-mobile" style="padding-left: 5%;padding-right: 5%;">
+                <div class="accordion" id="footer-accordion-3">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="title">
+                            <span class="ux-menu-title" data-bs-toggle="collapse" data-bs-target="#footer-menu-3" aria-expanded="true" aria-controls="footer-menu-3" style="padding-top: 4%;">Đào tạo</span>
+                            <i style="color: white;" class="fa fa-caret-down"></i>
+                        </h2>
+                        <div id="footer-menu-3" class="accordion-collapse collapse" aria-labelledby="title" data-bs-parent="#footer-accordion-3">
+                            <div class="accordion-body">
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net/dao-tao-tieng-han/">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Hàn</span>
+                                </a>
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net/tin-tuc/dao-tao-tieng-nhat/">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Nhật</span>
+                                </a>
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Đức</span>
+                                </a>
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Trung</span>
+                                </a>
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Anh</span>
+                                </a>
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">English Kids</span>
+                                </a>
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Tiền tiểu học</span>
+                                </a>
+                                <a class="ux-menu-link__link flex" href="https://duhocbic.net">
+                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Toán nhanh Soroban</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="section-mobile" style="padding-left: 5%;padding-right: 5%;padding-bottom: 5%">
@@ -346,7 +341,7 @@
             </div>
         </section>
     </footer>
-    <div class="contact-box-bottom animate__backInRight contact1">
+    <div class="contact-box-bottom animate__backInRight contact1 d-none d-sm-block">
         <a class="contact-box-wrapper nut-chat-facebook" href="https://www.facebook.com/duhocbicvietnam" target="_blank" style="opacity: 1;">
             <div class="contact-icon-box" style="border: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><radialGradient id="a" cx="101.9" cy="809" r="1.1" gradientTransform="matrix(800 0 0 -800 -81386 648000)" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#09f"></stop><stop offset=".6" style="stop-color:#a033ff"></stop><stop offset=".9" style="stop-color:#ff5280"></stop><stop offset="1" style="stop-color:#ff7061"></stop></radialGradient><path fill="url(#a)" d="M400 0C174.7 0 0 165.1 0 388c0 116.6 47.8 217.4 125.6 287 6.5 5.8 10.5 14 10.7 22.8l2.2 71.2a32 32 0 0 0 44.9 28.3l79.4-35c6.7-3 14.3-3.5 21.4-1.6 36.5 10 75.3 15.4 115.8 15.4 225.3 0 400-165.1 400-388S625.3 0 400 0z"></path><path fill="#FFF" d="m159.8 501.5 117.5-186.4a60 60 0 0 1 86.8-16l93.5 70.1a24 24 0 0 0 28.9-.1l126.2-95.8c16.8-12.8 38.8 7.4 27.6 25.3L522.7 484.9a60 60 0 0 1-86.8 16l-93.5-70.1a24 24 0 0 0-28.9.1l-126.2 95.8c-16.8 12.8-38.8-7.3-27.5-25.2z"></path>
                 </svg></div>

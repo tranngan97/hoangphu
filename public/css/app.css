@@ -8072,11 +8072,11 @@ body {
     }
     .logo {
         padding-bottom: 5%;
+        padding-top: 2%;
         img{
             max-width: 75px;
             margin-left: auto;
             margin-right: auto;
-            padding-top: 2%;
         }
     }
     .top-menu-container {
@@ -8112,6 +8112,14 @@ body {
         position: relative;
         min-height: auto;
         width: 100%;
+    }
+    .accordion {
+        --bs-accordion-bg: unset !important;
+        --bs-accordion-btn-color: unset !important;
+        --bs-accordion-active-color: unset !important;
+        --bs-accordion-border-color: unset !important;
+        --bs-accordion-active-bg: unset !important;
+        --bs-accordion-color: unset !important;
     }
 }
 .input-group-login {

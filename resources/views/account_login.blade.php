@@ -61,7 +61,7 @@
                         <label class="control-label" for="phone">Ngày sinh</label>
                         <div class="controls">
                             <div class="input-group-login date" id="datepicker-login">
-                                <input type="text" name="dob" class="form-control" id="date"/>
+                                <input type="text" name="dob" class="form-control" id="login-date"/>
                             </div>
                         </div>
                     </div>
