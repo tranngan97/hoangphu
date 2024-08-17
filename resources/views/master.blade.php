@@ -203,7 +203,7 @@
                 <div id="col-2001932309" class="col col-md-2">
                     <div class="col-inner">
                         <div class="ux-menu stack stack-col justify-start">
-                            <div class="ux-menu-title" style="padding-top: 4%;">Kết nối với Hoàng Phú</div>
+                            <div class="ux-menu-title">Kết nối với Hoàng Phú</div>
                             <div class="ux-menu-link menu-item">
                                 <a href="https://www.facebook.com/duhocxkldhoangphu" target="_blank">
                                     <i class="fa-brands fa-3x fa-square-facebook" style="margin-right: 1rem"></i>
@@ -229,26 +229,29 @@
             <div class="section-mobile" style="padding-left: 5%;padding-right: 5%;">
                 <div class="accordion" id="footer-accordion-1">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="title">
-                            <span class="ux-menu-title" data-bs-toggle="collapse" data-bs-target="#footer-menu-1" aria-expanded="true" aria-controls="footer-menu-1" style="padding-top: 4%;">Du học Hoàng Phú</span>
-                            <i style="color: white;" class="fa fa-caret-down"></i>
-                        </h2>
+                        <div class="accordion-header" id="title">
+                            <div class="ux-menu-title" data-bs-toggle="collapse" data-bs-target="#footer-menu-1"
+                                 aria-expanded="true" aria-controls="footer-menu-1">
+                                Du học Hoàng Phú
+                                <i style="color: white;" class="fa fa-caret-down"></i>
+                            </div>
+                        </div>
                         <div id="footer-menu-1" class="accordion-collapse collapse" aria-labelledby="title" data-bs-parent="#footer-accordion-1">
                             <div class="accordion-body">
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net/chuong-trinh/du-hoc-han-quoc-2021/">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Hàn Quốc</span>
+                                    <span class="ux-menu-link__text">Du học Hàn Quốc</span>
                                 </a>
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net/chuong-trinh/du-hoc-nhat-ban-2/">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Nhật Bản</span>
+                                    <span class="ux-menu-link__text">Du học Nhật Bản</span>
                                 </a>
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net/du-hoc-dai-loan-2/">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Đài Loan</span>
+                                    <span class="ux-menu-link__text">Du học Đài Loan</span>
                                 </a>
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net/du-hoc-trung-quoc/">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Đức</span>
+                                    <span class="ux-menu-link__text">Du học Đức</span>
                                 </a>
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net/du-hoc-duc-2/">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Du học Úc</span>
+                                    <span class="ux-menu-link__text">Du học Úc</span>
                                 </a>
                             </div>
                         </div>
@@ -258,29 +261,32 @@
             <div class="section-mobile" style="padding-left: 5%;padding-right: 5%;">
                 <div class="accordion" id="footer-accordion-2">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="title">
-                            <span class="ux-menu-title" data-bs-toggle="collapse" data-bs-target="#footer-menu-2" aria-expanded="true" aria-controls="footer-menu-2" style="padding-top: 4%;">XKLĐ Hoàng Phú</span>
-                            <i style="color: white;" class="fa fa-caret-down"></i>
-                        </h2>
+                        <div class="accordion-header" id="title">
+                            <div class="ux-menu-title" data-bs-toggle="collapse" data-bs-target="#footer-menu-2"
+                                 aria-expanded="true" aria-controls="footer-menu-2">
+                                XKLĐ Hoàng Phú
+                                <i style="color: white;" class="fa fa-caret-down"></i>
+                            </div>
+                        </div>
                         <div id="footer-menu-2" class="accordion-collapse collapse" aria-labelledby="title" data-bs-parent="#footer-accordion-2">
                             <div class="accordion-body">
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-han-quoc-2/">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Hàn Quốc</span>
+                                    <span class="ux-menu-link__text">XKLĐ Hàn Quốc</span>
                                 </a>
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net/chuong-trinh/xuat-khau-lao-dong-nhat-ban-2/">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Nhật Bản</span>
+                                    <span class="ux-menu-link__text">XKLĐ Nhật Bản</span>
                                 </a>
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net/chuong-trinh/xuat-khau-lao-dong-dai-loan-2/">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Đài Loan</span>
+                                    <span class="ux-menu-link__text">XKLĐ Đài Loan</span>
                                 </a>
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-trung-quoc/">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Đức</span>
+                                    <span class="ux-menu-link__text">XKLĐ Đức</span>
                                 </a>
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-duc/">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Úc</span>
+                                    <span class="ux-menu-link__text">XKLĐ Úc</span>
                                 </a>
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net/xuat-khau-lao-dong-duc/">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">XKLĐ Châu Âu</span>
+                                    <span class="ux-menu-link__text">XKLĐ Châu Âu</span>
                                 </a>
                             </div>
                         </div>
@@ -290,35 +296,38 @@
             <div class="section-mobile" style="padding-left: 5%;padding-right: 5%;">
                 <div class="accordion" id="footer-accordion-3">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="title">
-                            <span class="ux-menu-title" data-bs-toggle="collapse" data-bs-target="#footer-menu-3" aria-expanded="true" aria-controls="footer-menu-3" style="padding-top: 4%;">Đào tạo</span>
-                            <i style="color: white;" class="fa fa-caret-down"></i>
-                        </h2>
+                        <div class="accordion-header" id="title">
+                            <div class="ux-menu-title" data-bs-toggle="collapse" data-bs-target="#footer-menu-3"
+                                 aria-expanded="true" aria-controls="footer-menu-3">
+                                Đào tạo
+                                <i style="color: white;" class="fa fa-caret-down"></i>
+                            </div>
+                        </div>
                         <div id="footer-menu-3" class="accordion-collapse collapse" aria-labelledby="title" data-bs-parent="#footer-accordion-3">
                             <div class="accordion-body">
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net/dao-tao-tieng-han/">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Hàn</span>
+                                    <span class="ux-menu-link__text">Đào tạo tiếng Hàn</span>
                                 </a>
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net/tin-tuc/dao-tao-tieng-nhat/">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Nhật</span>
+                                    <span class="ux-menu-link__text">Đào tạo tiếng Nhật</span>
                                 </a>
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Đức</span>
+                                    <span class="ux-menu-link__text">Đào tạo tiếng Đức</span>
                                 </a>
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Trung</span>
+                                    <span class="ux-menu-link__text">Đào tạo tiếng Trung</span>
                                 </a>
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Đào tạo tiếng Anh</span>
+                                    <span class="ux-menu-link__text">Đào tạo tiếng Anh</span>
                                 </a>
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">English Kids</span>
+                                    <span class="ux-menu-link__text">English Kids</span>
                                 </a>
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Tiền tiểu học</span>
+                                    <span class="ux-menu-link__text">Tiền tiểu học</span>
                                 </a>
                                 <a class="ux-menu-link__link flex" href="https://duhocbic.net">
-                                    <i style="color: white; padding-right: 2%" class="fa fa-caret-right"></i><span class="ux-menu-link__text">Toán nhanh Soroban</span>
+                                    <span class="ux-menu-link__text">Toán nhanh Soroban</span>
                                 </a>
                             </div>
                         </div>

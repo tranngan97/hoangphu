@@ -40,7 +40,7 @@
                             <label class="control-label" for="phone">Ngày sinh</label>
                             <div class="controls">
                                 <div class="input-group user-date" id="user-datepicker">
-                                    <input type="text" name="dob" class="form-control" value="{{date('d/m/Y', $currentUser->dob)}}" id="user-datepicker"/>
+                                    <input type="text" name="dob" class="form-control" @if($currentUser->dob !== NULL) value="{{date('d/m/Y', $currentUser->dob)}}" @endif id="user-datepicker"/>
                                 </div>
                             </div>
                         </div>
